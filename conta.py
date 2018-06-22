@@ -11,7 +11,7 @@ class Conta():
         else:
             self.saldo -= valor
             print("\n***ALERTA: Foi SACADO R${} da sua conta!***".format(valor),
-                  "\n--- Saldo: R${}".format(self.saldo))
+                  "\n--- Saldo: R${:.2f}".format(self.saldo))
 
     def depositar(self,valor):
         if(valor <= 0):
@@ -19,7 +19,7 @@ class Conta():
         else:
             self.saldo += valor
             print("\n***ALERTA: Foi DEPOSITADO R${} na sua conta!***".format(valor),
-                  "\n--- Saldo: R${}".format(self.saldo))
+                  "\n--- Saldo: R${:.2f}".format(self.saldo))
 
 
 

@@ -15,7 +15,7 @@ saldo = float(input("Digite o seu saldo inicial: "))
 pessoa1 = Cliente(nome,cpf,idade)
 conta1 = Conta(pessoa1,numero,saldo,100) # LIMITE DEFINIDO COMO 100
 
-print("====================\n"+str(pessoa1),"\n"+"N°Conta:",conta1.numero_conta,"\n"+"Saldo: R$",conta1.saldo,"\n====================")
+print("====================\n"+str(pessoa1),"\n"+"N°Conta:",conta1.numero_conta,"\n"+"Saldo: R${:.2f}".format(conta1.saldo),"\n====================")
 
 resposta = ''
 lista_resposta = ['DEPOSITAR','SACAR','CONSULTAR SALDO','SAIR']
@@ -32,7 +32,7 @@ while (resposta != 'SAIR'):
         conta1.sacar(valor)
 
     elif(resposta == "CONSULTAR SALDO"):
-        print("\n--- SEU SALDO É DE R${}".format(conta1.saldo))
+        print("\n--- SEU SALDO É DE R${:.2f}".format(conta1.saldo))
 
     elif(resposta not in lista_resposta):
         print("\nTENTE NOVAMENTE. . .")
