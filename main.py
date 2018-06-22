@@ -10,7 +10,7 @@ nome = str(input("Nome do Titular: "))
 cpf = str(input("CPF do Titular: "))
 idade = int(input("Idade do Titular: "))
 numero = str(input("Digite o Numero da Conta: "))
-saldo = int(input("Digite o seu saldo inicial: "))
+saldo = float(input("Digite o seu saldo inicial: "))
 
 pessoa1 = Cliente(nome,cpf,idade)
 conta1 = Conta(pessoa1,numero,saldo,100) # LIMITE DEFINIDO COMO 100
